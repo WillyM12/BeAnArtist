@@ -49,6 +49,12 @@ public class PanneauDessin extends JPanel{
 		vueFormes.add(vueForme);
 	}
 	
+	public void supprimerVueForme(VueForme vueForme) {
+		if (vueForme != null) {
+			vueFormes.remove(vueForme);
+		}	
+	}
+	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
