@@ -53,9 +53,7 @@ public class Etoile extends Forme implements Remplissable{
 		String sommet = "top";
 		
 		this.coordonnees.clear();
-
-		//Coordonnees firstPoint = new Coordonnees((super.getPosition().getAbscisse()+taille) - (rayon - (Math.acos(anglePremiereBranche)*rayon)), (super.getPosition().getOrdonnee()+taille) - (rayon - (Math.asin(anglePremiereBranche)*rayon)));
-		//coordonnees.add(new Coordonnees(firstPoint.getAbscisse(), firstPoint.getOrdonnee()));
+		
 		peak = anglePremiereBranche;
 		
 		for (int i = 0; i < nombreBranches*2; i++) {
@@ -102,6 +100,7 @@ public class Etoile extends Forme implements Remplissable{
 	
 	public void setPosition(Coordonnees position) {
 		super.setPosition(position);
+		this.creerEtoile(position, super.getLargeur(), this.nombreBranches, this.anglePremiereBranche, this.longueurBranche);
 	}
 
 	public int getNombreBranches() {
