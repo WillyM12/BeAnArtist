@@ -9,6 +9,8 @@ import fr.eseo.poo.projet.artiste.modele.formes.Forme;
 
 public class Ellipse extends Forme implements Remplissable{
 	
+	public static final String NOM_FORME = "Ellipse";
+	
 	private boolean modeRemplissage;
 	
 	public Ellipse(Coordonnees position, double largeur, double hauteur){

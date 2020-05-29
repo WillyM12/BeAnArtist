@@ -13,6 +13,7 @@ public class Etoile extends Forme implements Remplissable{
 	public static final int NOMBRE_BRANCHES_PAR_DEFAUT = 5;
 	public static final double ANGLE_PREMIERE_BRANCHE_PAR_DEFAUT = -Math.PI/2;
 	public static final double LONGUEUR_BRANCHE_PAR_DEFAUT = 0.5;
+	public static final String NOM_FORME = "Etoile";
 	
 	private List<Coordonnees> coordonnees;
 	private int nombreBranches;

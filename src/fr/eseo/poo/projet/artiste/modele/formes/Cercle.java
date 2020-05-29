@@ -7,6 +7,8 @@ import fr.eseo.poo.projet.artiste.modele.Coordonnees;
 
 public class Cercle extends Ellipse {	
 	
+	public static final String NOM_FORME = "Cercle";
+	
 	public Cercle(Coordonnees position, double taille){
 		super(position, taille ,taille);
 		super.setRempli(false);

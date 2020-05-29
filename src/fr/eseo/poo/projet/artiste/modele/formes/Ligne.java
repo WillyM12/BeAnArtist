@@ -9,6 +9,7 @@ import fr.eseo.poo.projet.artiste.modele.formes.Forme;
 public class Ligne extends Forme{
 	
 	public static final double EPSILON = 0.5;
+	public static final String NOM_FORME = "Ligne";
 
 	public Ligne(Coordonnees position, double largeur, double hauteur){
 		super(position, largeur, hauteur);

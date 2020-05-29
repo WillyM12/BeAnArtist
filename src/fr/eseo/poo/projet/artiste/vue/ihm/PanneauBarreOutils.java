@@ -15,6 +15,7 @@ import fr.eseo.poo.projet.artiste.controleur.actions.ActionChoisirForme;
 import fr.eseo.poo.projet.artiste.controleur.actions.ActionChoisirRemplissage;
 import fr.eseo.poo.projet.artiste.controleur.actions.ActionDeplacer;
 import fr.eseo.poo.projet.artiste.controleur.actions.ActionEffacer;
+import fr.eseo.poo.projet.artiste.controleur.actions.ActionRedimensionner;
 import fr.eseo.poo.projet.artiste.controleur.actions.ActionSelectionner;
 import fr.eseo.poo.projet.artiste.controleur.actions.ActionSupprimer;
 import fr.eseo.poo.projet.artiste.modele.formes.Etoile;
@@ -79,7 +80,12 @@ public class PanneauBarreOutils extends JPanel {
 		ActionDeplacer deplacer = new ActionDeplacer(this.panneauDessin);
 		JToggleButton outilDeplacer = new JToggleButton(deplacer);
 		outilDeplacer.setText(ActionDeplacer.NOM_ACTION);
-		outilDeplacer.setName(ActionDeplacer.NOM_ACTION);		
+		outilDeplacer.setName(ActionDeplacer.NOM_ACTION);
+		
+		ActionRedimensionner redimensionner = new ActionRedimensionner(this.panneauDessin);
+		JToggleButton outilRedimensionner = new JToggleButton(redimensionner);
+		outilRedimensionner.setText(ActionRedimensionner.NOM_ACTION);
+		outilRedimensionner.setName(ActionRedimensionner.NOM_ACTION);
 		
 		buttonGroup.add(outilLigne);
 		buttonGroup.add(outilEllipse);
@@ -88,6 +94,7 @@ public class PanneauBarreOutils extends JPanel {
 		buttonGroup.add(outilSelectionner);
 		buttonGroup.add(outilEraseForme);
 		buttonGroup.add(outilDeplacer);
+		buttonGroup.add(outilRedimensionner);
 		
 		ActionChoisirCouleur color = new ActionChoisirCouleur(this.panneauDessin);
 		JButton chooseColor = new JButton(color);
@@ -122,6 +129,7 @@ public class PanneauBarreOutils extends JPanel {
 		this.add(outilSelectionner);
 		this.add(outilEraseForme);
 		this.add(outilDeplacer);
+		this.add(outilRedimensionner);
 		this.add(chooseColor);
 		this.add(modeRemplissage);
 		this.add(labelNbBranches);
